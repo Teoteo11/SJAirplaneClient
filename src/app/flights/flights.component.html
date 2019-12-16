@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">_id</th>
+            <th scope="col">departure</th>
+            <th scope="col">destination</th>
+            <th scope="col">duration</th>
+            <th scope="col">idAirplane</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let flight of flightsList">
+            <a href="app-flights/{{flight._id}}">
+                <td>{{flight._id}}</td>
+            </a>
+            <td>{{flight.departure}}</td>
+            <td>{{flight.destination}}</td>
+            <td>{{flight.duration}}</td>
+            <td>{{flight.idAirplane}}</td>
+        </tr>
+    </tbody>
+</table>

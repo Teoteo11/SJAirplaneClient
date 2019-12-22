@@ -1,19 +1,22 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Flight } from './modules';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Flight } from "./modules";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class FlightsService {
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   async getFlights(): Promise<Flight[]> {
-    return this.httpClient.get<Flight[]>("http://localhost:3002/flights").toPromise();
+    return this.httpClient
+      .get<Flight[]>("http://localhost:3002/flights")
+      .toPromise();
   }
 
-  async getFlightsById(id: String): Promise<Flight> {
-    return this.httpClient.get<Flight>(`http://localhost:3002/flights/${id}`).toPromise();
+  async getFlightsById(id: string): Promise<Flight> {
+    return this.httpClient
+      .get<Flight>(`http://localhost:3002/flights/${id}`)
+      .toPromise();
   }
 }

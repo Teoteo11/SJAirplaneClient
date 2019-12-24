@@ -8,7 +8,7 @@ import { AppComponent } from "./app.component";
 import { FlightsComponent } from "./flights/flights.component";
 import { FlightDetailComponent } from "./flight-detail/flight-detail.component";
 import { UsersComponent } from "./users/users.component";
-import { UsersDetailComponent } from './users-detail/users-detail.component';
+import { UsersDetailComponent } from "./users-detail/users-detail.component";
 
 @NgModule({
   declarations: [

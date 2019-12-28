@@ -1,118 +1,103 @@
 <!--NAVBAR-->
-<nav id="navbar" class="navbar navbar-expand-lg py-3 ">
-  <div class="container">
-    <a href="#" class="navbar-brand">
-      <img
-        class="d-inline-block align-middle mr-2"
-        src="https://img.icons8.com/bubbles/100/000000/around-the-globe.png"
-      />
-      <span id="text-navbar">SJAirlines</span>
-    </a>
+<nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <img class="d-inline-block align-middle mr-2" src="https://img.icons8.com/bubbles/100/000000/around-the-globe.png" />
+            <span>SJAirlines</span>
+        </a>
 
-    <button
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      class="navbar-toggler"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div id="navbarSupportedContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a id="text-navbar" href="#" class="nav-link"
-            >Home <span class="sr-only">(current)</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a id="text-navbar" href="#about" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a id="text-navbar" href="#about" class="nav-link">Services</a>
-        </li>
-        <li class="nav-item">
-          <a id="text-navbar" href="#about" class="nav-link">Contact</a>
-        </li>
-      </ul>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Login</a>
+                    <router-link></router-link>
+                </li>
+
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 <!--END NAVBAR-->
 
 <!--BOOKING-->
-<div id="booking" class="section">
-  <div class="section-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="booking-cta">
-            <h1 id="h1-text">Discover the world</h1>
-            <p id="p-text">
-              Book your dream trip, with us your dream takes shape
-            </p>
-          </div>
-        </div>
-        <div class="col-md-7 col-md-offset-1">
-          <div class="booking-form">
-            <form>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <span class="form-label">Flying from</span>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="City or airport"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <span class="form-label">Flyning to</span>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="City or airport"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <span class="form-label">Check In</span>
-                    <input class="form-control" type="date" required />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <span class="form-label">Check Out</span>
-                    <input class="form-control" type="date" required />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
+<section>
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
                 <div class="col-md-4">
-                  <div class="form-group">
-                    <span class="form-label">Adults (18+)</span>
-                    <select class="form-control">
+                    <div class="booking-cta">
+                        <h1>Discover the world</h1>
+                        <p>
+                            Book your dream trip, with us your dream takes shape
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1">
+                    <div class="booking-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Flying from</span>
+                                        <input class="form-control" type="text" placeholder="City or airport" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Flyning to</span>
+                                        <input class="form-control" type="text" placeholder="City or airport" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Check In</span>
+                                        <input class="form-control" type="date" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Check Out</span>
+                                        <input class="form-control" type="date" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <span class="form-label">Adults (18+)</span>
+                                        <select class="form-control">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
                       <option>4</option>
                       <option>5</option>
                     </select>
-                    <span class="select-arrow"></span>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <span class="form-label">Children (0-17)</span>
-                    <select class="form-control">
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <span class="form-label">Children (0-17)</span>
+                                        <select class="form-control">
                       <option>0</option>
                       <option>1</option>
                       <option>2</option>
@@ -120,57 +105,51 @@
                       <option>4</option>
                       <option>5</option>
                     </select>
-                    <span class="select-arrow"></span>
-                  </div>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-btn">
+                                <button class="submit-btn">Show flights</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-              </div>
-              <div class="form-btn">
-                <button class="submit-btn" id="btn-text">Show flights</button>
-              </div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
+</section>
 <!--END BOOKING-->
 
 <!--SEPARATOR-->
 <div class="separator">
-  <div class="separator2">
-    <div class="text-div">
-      <h2 class="h2-separator">OUR DESTINATIONS</h2>
-      <h4 class="h4-separator">
-        Choose the best places for you and your family
-      </h4>
+    <div class="separator2">
+        <div class="text-div">
+            <h2 class="h2-separator">OUR DESTINATIONS</h2>
+            <h4 class="h4-separator">
+                Choose the best places for you and your family
+            </h4>
+        </div>
     </div>
-  </div>
 </div>
 <!--END SEPARATOR-->
 
 <!---CARD-->
 <section class="details-card">
-  <div class="container">
-    <h1 id="text-pre-card">TOP 3 PLACES VISITED</h1>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card-content">
-          <div class="card-img">
-            <img
-              src="https://i.pinimg.com/originals/7c/c3/69/7cc369a6e592e4c123b77de7fae305e5.jpg"
-              alt=""
-            />
-          </div>
-          <div class="card-desc">
-            <h3 id="text-card">Barcellona</h3>
-            <p id="text-card">
-              Barcellona is a city of Spain of 1.620.343 inhabitants, capital of
-              Catalonia, an autonomous community in the eastern part of the
-              state..
-            </p>
-            <a href="https://it.wikipedia.org/wiki/Barcellona" class="btn-card"
-              >Read More</a
+    <div class="container">
+        <h1 id="text-pre-card">TOP 3 PLACES VISITED</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="https://i.pinimg.com/originals/7c/c3/69/7cc369a6e592e4c123b77de7fae305e5.jpg" alt="" />
+                    </div>
+                    <div class="card-desc">
+                        <h3 id="text-card">Barcellona</h3>
+                        <p id="text-card">
+                            Barcellona is a city of Spain of 1.620.343 inhabitants, capital of Catalonia, an autonomous community in the eastern part of the state..
+                        </p>
+                        <a href="https://it.wikipedia.org/wiki/Barcellona" class="btn-card">Read More</a
             >
           </div>
         </div>
@@ -220,9 +199,9 @@
 <!--END CARD-->
 
 <!---FOOTER-->
-<footer class="pt-5 pb-4" id="contact">
+<footer class="pt-5 pb-4">
   <div class="container">
-    <div class="row">
+    <div class="row text-light">
       <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
         <h5 id="about" class="mb-4 font-weight-bold">ABOUT US</h5>
         <p class="mb-4">Contact us when and how you want</p>
@@ -243,93 +222,88 @@
               <div class="col-10">
                 <h6 class="font-weight-bold mb-0">Have any questions?</h6>
                 <p><a href="#">sjairlines@gmail.com</a></p>
-              </div>
+                    </div>
+                </div>
+                </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-        <h5 class="mb-4 font-weight-bold">FRESH TWEETS</h5>
-        <ul class="f-address">
-          <li>
-            <div class="row">
-              <div class="col-1"><i class="fab fa-twitter"></i></div>
-              <div class="col-10">
-                <p class="mb-0">
-                  @realTravel Amazing services!
-                </p>
-                <label>10 Mins Ago</label>
-              </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                <h5 class="mb-4 font-weight-bold">FRESH TWEETS</h5>
+                <ul class="f-address">
+                    <li>
+                        <div class="row">
+                            <div class="col-1"><i class="fab fa-twitter"></i></div>
+                            <div class="col-10">
+                                <p class="mb-0">
+                                    @realTravel Amazing services!
+                                </p>
+                                <label>10 Mins Ago</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-1"><i class="fab fa-twitter"></i></div>
+                            <div class="col-10">
+                                <p class="mb-0">
+                                    @Ryanair_official wow! good job
+                                </p>
+                                <label>10 Mins Ago</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-1"><i class="fab fa-twitter"></i></div>
+                            <div class="col-10">
+                                <p class="mb-0">
+                                    @AlitaliaOfficial Come on with us!
+                                </p>
+                                <label>10 Mins Ago</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-          <li>
-            <div class="row">
-              <div class="col-1"><i class="fab fa-twitter"></i></div>
-              <div class="col-10">
-                <p class="mb-0">
-                  @Ryanair_official wow! good job
-                </p>
-                <label>10 Mins Ago</label>
-              </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                <h5 class="mb-4 font-weight-bold">LATEST UPDATES</h5>
+                <ul class="recent-post">
+                    <li>
+                        <label class="mr-3">28 <br /><span>APR</span></label>
+                        <span>Don't miss out on the latest tickets</span>
+                    </li>
+                    <li>
+                        <label class="mr-3">05 <br /><span>NOV</span></label>
+                        <span> See the new travel offers made just for you.</span>
+                    </li>
+                    <li>
+                        <label class="mr-3">13 <br /><span>DEC</span></label>
+                        <span> Make Christmas even more beautiful with us.</span>
+                    </li>
+                </ul>
             </div>
-          </li>
-          <li>
-            <div class="row">
-              <div class="col-1"><i class="fab fa-twitter"></i></div>
-              <div class="col-10">
-                <p class="mb-0">
-                  @AlitaliaOfficial Come on with us!
-                </p>
-                <label>10 Mins Ago</label>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-        <h5 class="mb-4 font-weight-bold">LATEST UPDATES</h5>
-        <ul class="recent-post">
-          <li>
-            <label class="mr-3">28 <br /><span>APR</span></label>
-            <span>Don't miss out on the latest tickets</span>
-          </li>
-          <li>
-            <label class="mr-3">05 <br /><span>NOV</span></label>
-            <span> See the new travel offers made just for you.</span>
-          </li>
-          <li>
-            <label class="mr-3">13 <br /><span>DEC</span></label>
-            <span> Make Christmas even more beautiful with us.</span>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-        <h5 class="mb-4 font-weight-bold">CONNECT WITH US</h5>
-        <div class="input-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Your Email Address"
-          />
-          <span class="input-group-addon" id="basic-addon2"
-            ><i class="fas fa-check"></i
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                <h5 class="mb-4 font-weight-bold">CONNECT WITH US</h5>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Your Email Address" />
+                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i
           ></span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</footer>
-<!-- Copyright -->
-<section class="copyright">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 ">
-        <div class="text-center text-white">
-          &copy; 2020 SJAirlines. All Rights Reserved.
+    </footer>
+    <!-- Copyright -->
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="text-center text-white">
+                        &copy; 2020 SJAirlines. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--END FOOTER-->
-<router-outlet></router-outlet>
+    </section>
+    <!--END FOOTER-->
+    <router-outlet></router-outlet>

@@ -9,6 +9,7 @@ import { FlightsComponent } from "./flights/flights.component";
 import { FlightDetailComponent } from "./flight-detail/flight-detail.component";
 import { UsersComponent } from "./users/users.component";
 import { UsersDetailComponent } from "./users-detail/users-detail.component";
+import { BackoffComponent } from './backoff/backoff.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UsersDetailComponent } from "./users-detail/users-detail.component";
     FlightsComponent,
     FlightDetailComponent,
     UsersComponent,
-    UsersDetailComponent
+    UsersDetailComponent,
+    BackoffComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

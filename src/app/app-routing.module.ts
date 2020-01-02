@@ -1,13 +1,13 @@
 import { UsersComponent } from "./users/users.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { FlightsComponent } from "./flights/flights.component";
-import { FlightDetailComponent } from "./flight-detail/flight-detail.component";
 import { UsersDetailComponent } from "./users-detail/users-detail.component";
+import { PrenotationComponent } from "./prenotation/prenotation.component";
+import { BackoffComponent } from "./backoff/backoff.component";
 
 const routes: Routes = [
-  { path: "app-flights", component: FlightsComponent },
-  { path: "app-flights/:id", component: FlightDetailComponent },
+  { path: "backoff", component: BackoffComponent },
+  { path: "prenotation", component: PrenotationComponent },
   { path: "app-users", component: UsersComponent },
   { path: "app-users/:id", component: UsersDetailComponent }
 ];

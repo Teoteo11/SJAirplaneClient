@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    background-image: linear-gradient( to top, #4fa3e3, #91b7eb, #bfccf2, #e3e4f8, #ffffff);
+    /*background-image: linear-gradient( to top, #4fa3e3, #91b7eb, #bfccf2, #e3e4f8, #ffffff);*/
 }
 
 .separator {
@@ -235,10 +235,8 @@ body {
     color: #191a1e;
 }
 
-section {
+#booking {
     background-image: url("./image/background.jpg");
-    font-family: 'Abel', sans-serif;
-    padding: 100px 0;
 }
 
 .details-card {

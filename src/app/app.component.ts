@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   title = "sjairplane";
+  
   public showBookings:boolean = true;
 
   async ngOnInit() {}

@@ -1,0 +1,93 @@
+<section>
+  <section id="booking" class="py-5">
+
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="booking-cta">
+              <h1>Discover the world</h1>
+              <p>Book your dream trip, with us your dream takes shape</p>
+            </div>
+          </div>
+
+          <div class="col-md-7 col-md-offset-1">
+            <div class="booking-form">
+
+              <form>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <span class="form-label">Flying from</span>
+                      <input class="form-control" type="text" placeholder="City or airport" />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <span class="form-label">Flyning to</span>
+                      <input class="form-control" type="text" placeholder="City or airport" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <span class="form-label">Check In</span>
+                      <input class="form-control" type="date" required />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <span class="form-label">Check Out</span>
+                      <input class="form-control" type="date" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <span class="form-label">Adults (18+)</span>
+                      <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                      <span class="select-arrow"></span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <span class="form-label">Children (0-17)</span>
+                      <select class="form-control">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-btn">
+                  <input type="button" value="Show flights" class="submit-btn" routerLink="/prenotation" routerLinkActive="active" (click)="showBookings = false;" />
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

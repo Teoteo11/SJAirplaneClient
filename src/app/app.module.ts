@@ -13,6 +13,10 @@ import { UsersComponent } from "./components/users/users.component";
 import { BookingFormComponent } from "./components/booking-form/booking-form.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { BookingViewComponent } from './components/admin/dashboard/booking-view/booking-view.component';
+import { FlightViewComponent } from './components/admin/dashboard/flight-view/flight-view.component';
+import { DashNavComponent } from './components/admin/dashboard/dash-nav/dash-nav.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
     PrenotationComponent,
     BookingFormComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    DashboardComponent,
+    BookingViewComponent,
+    FlightViewComponent,
+    DashNavComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

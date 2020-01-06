@@ -7,7 +7,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 import { UsersDetailComponent } from "./components/users-detail/users-detail.component";
-import { BackoffComponent } from "./components/backoff/backoff.component";
+import { BackoffComponent } from "./components/admin/backoff/backoff.component";
 import { PrenotationComponent } from "./components/prenotation/prenotation.component";
 import { UsersComponent } from "./components/users/users.component";
 import { BookingFormComponent } from "./components/booking-form/booking-form.component";

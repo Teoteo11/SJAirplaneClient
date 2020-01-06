@@ -35,3 +35,10 @@ export interface Company {
   routes: Array<Route>;
   maxAirplanes: number;
 }
+
+export interface Airport {
+  id?: String;
+  city: String;
+  country: String;
+  name: String
+}

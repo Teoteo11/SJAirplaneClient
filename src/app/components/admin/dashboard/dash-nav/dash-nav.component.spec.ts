@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BackoffComponent } from './backoff.component';
+import { DashNavComponent } from './dash-nav.component';
 
-describe('BackoffComponent', () => {
-  let component: BackoffComponent;
-  let fixture: ComponentFixture<BackoffComponent>;
+describe('DashNavComponent', () => {
+  let component: DashNavComponent;
+  let fixture: ComponentFixture<DashNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BackoffComponent ]
+      declarations: [ DashNavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BackoffComponent);
+    fixture = TestBed.createComponent(DashNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -10,8 +10,14 @@ export class AppComponent implements OnInit {
 
   title = "sjairplane";
 
-  // tslint:disable-next-line: ban-types
+  @Input() public adminModeIsOn:boolean;
   public showBookings: Boolean = true;
 
-  async ngOnInit() {}
+  public setAdminMode(value){
+    this.adminModeIsOn = value;
+  }
+  
+  async ngOnInit() {
+    this.adminModeIsOn = false;
+  }
 }

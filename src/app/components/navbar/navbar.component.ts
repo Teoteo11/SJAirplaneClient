@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  @Output() adminswitcher = new EventEmitter<boolean>();
 
-  ngOnInit() {
+  setAdminMode(value:boolean){
+    this.adminswitcher.emit(value);
   }
+
+  constructor() {}
+  ngOnInit() {}
 
 }

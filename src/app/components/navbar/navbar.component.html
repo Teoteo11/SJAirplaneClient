@@ -13,7 +13,7 @@
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a routerLink="/" class="nav-link" (click)="showBookings = true;">Home <span class="sr-only">(current)</span></a>
+          <a routerLink="/" class="nav-link" (click)="setAdminMode(false)">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a routerLink="/" class="nav-link">About</a>
@@ -25,7 +25,7 @@
           <a routerLink="/" class="nav-link">Contact</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/backoff" class="nav-link" (click)="showBookings = false;">Login</a>
+          <a routerLink="/backoff" class="nav-link" (click)="setAdminMode(true)">Login</a>
         </li>
       </ul>
     </div>

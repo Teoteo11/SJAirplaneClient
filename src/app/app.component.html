@@ -1,41 +1,38 @@
-<app-navbar></app-navbar>
-<booking-form *ngIf="showBookings"></booking-form>
+<app-navbar (adminswitcher)="setAdminMode($event)"></app-navbar>
 
-<!--SEPARATOR-->
-<div class="separator">
-  <div class="separator2">
-    <div class="text-div">
-      <h2 class="h2-separator">OUR DESTINATIONS</h2>
-      <h4 class="h4-separator">
-        Choose the best places for you and your family
-      </h4>
+<ng-container *ngIf="!adminModeIsOn">
+
+  <booking-form></booking-form>
+
+  <!--SEPARATOR-->
+  <div class="separator">
+    <div class="separator2">
+      <div class="text-div">
+        <h2 class="h2-separator">OUR DESTINATIONS</h2>
+        <h4 class="h4-separator">
+          Choose the best places for you and your family
+        </h4>
+      </div>
     </div>
   </div>
-</div>
-<!--END SEPARATOR-->
+  <!--END SEPARATOR-->
 
-<!---CARD-->
-<section class="details-card">
-  <div class="container">
-    <h1 id="text-pre-card">TOP 3 PLACES VISITED</h1>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card-content">
-          <div class="card-img">
-            <img
-              src="https://i.pinimg.com/originals/7c/c3/69/7cc369a6e592e4c123b77de7fae305e5.jpg"
-              alt=""
-            />
-          </div>
-          <div class="card-desc">
-            <h3 id="text-card">Barcelona</h3>
-            <p id="text-card">
-              Barcellona is a city of Spain of 1.620.343 inhabitants, capital of
-              Catalonia, an autonomous community in the eastern part of the
-              state..
-            </p>
-            <a href="https://it.wikipedia.org/wiki/Barcellona" class="btn-card"
-              >Read More</a
+  <!---CARD-->
+  <section class="details-card">
+    <div class="container">
+      <h1 id="text-pre-card">TOP 3 PLACES VISITED</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-content">
+            <div class="card-img">
+              <img src="https://i.pinimg.com/originals/7c/c3/69/7cc369a6e592e4c123b77de7fae305e5.jpg" alt="" />
+            </div>
+            <div class="card-desc">
+              <h3 id="text-card">Barcelona</h3>
+              <p id="text-card">
+                Barcellona is a city of Spain of 1.620.343 inhabitants, capital of Catalonia, an autonomous community in the eastern part of the state..
+              </p>
+              <a href="https://it.wikipedia.org/wiki/Barcellona" class="btn-card">Read More</a
             >
           </div>
         </div>
@@ -83,6 +80,12 @@
   </div>
 </section>
 <!--END CARD-->
+
+</ng-container>
+
+<ng-container *ngIf="adminModeIsOn">
+  <app-backoff></app-backoff>
+</ng-container>
 
 <app-footer></app-footer>
 

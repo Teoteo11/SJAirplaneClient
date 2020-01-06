@@ -1,10 +1,8 @@
 <section>
   <section id="booking" class="py-5">
-
     <div class="section-center">
       <div class="container">
         <div class="row">
-
           <div class="col-md-4">
             <div class="booking-cta">
               <h1>Discover the world</h1>
@@ -14,21 +12,32 @@
 
           <div class="col-md-7 col-md-offset-1">
             <div class="booking-form">
-
               <form>
-
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Flying from</span>
-                      <input class="form-control" type="text" placeholder="City or airport" />
+                      <select class="form-control">
+                        <option>Catania</option>
+                        <option>Milano</option>
+                        <option>Roma</option>
+                        <option>Barcellona</option>
+                        <option>Berlino</option>
+                      </select>
+                      <span class="select-arrow"></span>
                     </div>
                   </div>
-
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Flyning to</span>
-                      <input class="form-control" type="text" placeholder="City or airport" />
+                      <select class="form-control">
+                        <option>Londra</option>
+                        <option>Praga</option>
+                        <option>Amsterdam</option>
+                        <option>Roma</option>
+                        <option>Parigi</option>
+                      </select>
+                      <span class="select-arrow"></span>
                     </div>
                   </div>
                 </div>
@@ -63,26 +72,18 @@
                       <span class="select-arrow"></span>
                     </div>
                   </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <span class="form-label">Children (0-17)</span>
-                      <select class="form-control">
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                  </div>
                 </div>
 
                 <div class="form-btn">
-                  <input type="button" value="Show flights" class="submit-btn" routerLink="/prenotation" routerLinkActive="active" (click)="showBookings = false;" />
+                  <input
+                    type="button"
+                    value="Show flights"
+                    class="submit-btn"
+                    routerLink="/prenotation"
+                    routerLinkActive="active"
+                    (click)="showBookings = false"
+                  />
                 </div>
-
               </form>
             </div>
           </div>

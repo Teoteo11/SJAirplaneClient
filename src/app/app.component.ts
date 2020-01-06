@@ -9,8 +9,9 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   title = "sjairplane";
-  
-  public showBookings:boolean = true;
+
+  // tslint:disable-next-line: ban-types
+  public showBookings: Boolean = true;
 
   async ngOnInit() {}
 }

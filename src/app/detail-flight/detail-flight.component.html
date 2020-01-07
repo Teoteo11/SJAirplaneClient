@@ -1,3 +1,63 @@
 <p>detail-flight works!</p>
-{{ flight.departure }}
-{{ flight.destination }}
+<body class="qc-cmp-ui-showing">
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="flightInfo">
+        <div class="flightInfo-body">
+          <div class="fnum">
+            <div class="flight-num">Cathay Pacific CX826</div>
+            <div class="flightInfo-status flightInfo-status--active">
+              En-Route, Arriving in 7h04'
+            </div>
+          </div>
+          <div class="cfrom">
+            <div class="finfo">
+              <div class="fcity hidden-xs">{{ flight.departure }}</div>
+              <div class="fname">Hong Kong International Airport (HKG)</div>
+            </div>
+            <div class="line"></div>
+            <div class="date">Departure: 7 Jan, 2020</div>
+            <div class="flightCont-dateValues">
+              <div class="flightCont-dateItem">
+                <div class="scheduled">Scheduled:</div>
+                <div class="time">18:15</div>
+              </div>
+              <div class="flightCont-dateItem flightCont-dateItem--delimiter">
+                |
+              </div>
+              <div class="flightCont-dateItem">
+                <div class="actual">Actual:</div>
+                <div class="time">18:25</div>
+              </div>
+            </div>
+          </div>
+          <div class="flightInfo-distance"></div>
+          <div class="cto">
+            <div>
+              <div class="tcity hidden-xs">{{ flight.destination }}</div>
+              <div class="tname">
+                Toronto Pearson International Airport (YYZ)
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="date">Arrival: 7 Jan, 2020</div>
+            <div class="flightCont-dateValues">
+              <div class="flightCont-dateItem">
+                <div class="scheduled">Scheduled:</div>
+                <div class="time">20:10</div>
+              </div>
+              <div class="flightCont-dateItem flightCont-dateItem--delimiter">
+                |
+              </div>
+              <div class="flightCont-dateItem">
+                <div class="actual">Estimated:</div>
+                <div class="time">20:03</div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

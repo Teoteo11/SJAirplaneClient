@@ -13,4 +13,8 @@ export class AirportsService {
   public getAirports() {
     return this.httpClient.get<Airport[]>(`${this.apiURL}`).toPromise();
   }
+
+  public getAirportById(id: String) {
+    return this.httpClient.get<Airport>(`${this.apiURL}/${id}`).toPromise();
+  }
 }

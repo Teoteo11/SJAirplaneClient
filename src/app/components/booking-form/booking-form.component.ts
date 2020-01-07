@@ -13,10 +13,10 @@ export class BookingFormComponent implements OnInit {
 
   showBookings: boolean = true;
   airports: Array<Airport> = [];
-  departure: String;
-  destination: String;
-  checkIn: Date;
-  checkOut: Date;
+  departure: String = null;
+  destination: String = null;
+  checkIn: Date = null;
+  checkOut: Date = null;
   numSeats: Number;
 
 

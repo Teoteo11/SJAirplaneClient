@@ -9,7 +9,8 @@ import { DetailFlightComponent } from "./detail-flight/detail-flight.component";
 
 const routes: Routes = [
   { path: "login", component: DashboardComponent },
-  { path: "prenotation", component: PrenotationComponent },
+  { path: "prenotation/:departure/:destination/:checkIn/:checkOut/:numSeats", component: PrenotationComponent },
+  { path: "prenotation/:departure/:checkIn/:numSeats", component: PrenotationComponent },
   { path: "app-users", component: UsersComponent },
   { path: "app-users/:id", component: UsersDetailComponent },
   { path: "detailFlight", component: DetailFlightComponent }
@@ -19,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

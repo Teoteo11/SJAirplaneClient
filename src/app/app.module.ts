@@ -18,6 +18,8 @@ import { BookingViewComponent } from './components/admin/dashboard/booking-view/
 import { FlightViewComponent } from './components/admin/dashboard/flight-view/flight-view.component';
 import { DashNavComponent } from './components/admin/dashboard/dash-nav/dash-nav.component';
 import { DetailFlightComponent } from './detail-flight/detail-flight.component';
+import { DestinationsComponent } from './components/destinations/destinations.component';
+import { TopPlacesComponent } from './components/top-places/top-places.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { DetailFlightComponent } from './detail-flight/detail-flight.component';
     BookingViewComponent,
     FlightViewComponent,
     DashNavComponent,
-    DetailFlightComponent
+    DetailFlightComponent,
+    DestinationsComponent,
+    TopPlacesComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

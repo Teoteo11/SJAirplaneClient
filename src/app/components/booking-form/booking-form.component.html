@@ -1,4 +1,5 @@
 <section>
+
   <section id="booking" class="py-5">
     <div class="section-center">
       <div class="container">
@@ -13,39 +14,29 @@
           <div class="col-md-7 col-md-offset-1">
             <div class="booking-form">
               <form>
+
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Flying from</span>
-                      <select
-                        class="form-control"
-                        [(ngModel)]="departure"
-                        [ngModelOptions]="{ standalone: true }"
-                      >
+                      <select class="form-control" [(ngModel)]="departure" [ngModelOptions]="{ standalone: true }">
                         <option
                           *ngFor="let airport of airports"
-                          [ngValue]="airport._id"
-                        >
-                          {{ airport.name }},{{ airport.city }}</option
-                        >
+                          [ngValue]="airport._id">
+                          {{ airport.name }},{{ airport.city }}</option>
                       </select>
                       <span class="select-arrow"></span>
                     </div>
                   </div>
+
                   <div class="col-md-6">
                     <div class="form-group">
-                      <span class="form-label">Flyning to</span>
-                      <select
-                        class="form-control"
-                        [(ngModel)]="destination"
-                        [ngModelOptions]="{ standalone: true }"
-                      >
+                      <span class="form-label">Flying to</span>
+                      <select class="form-control" [(ngModel)]="destination" [ngModelOptions]="{ standalone: true }">
                         <option
                           *ngFor="let airport of airports"
-                          [ngValue]="airport._id"
-                        >
-                          {{ airport.name }},{{ airport.city }}</option
-                        >
+                          [ngValue]="airport._id">
+                          {{ airport.name }},{{ airport.city }}</option>
                       </select>
                       <span class="select-arrow"></span>
                     </div>
@@ -56,26 +47,14 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Check In</span>
-                      <input
-                        class="form-control"
-                        [ngModelOptions]="{ standalone: true }"
-                        [(ngModel)]="checkIn"
-                        type="date"
-                        required
-                      />
+                      <input class="form-control" [ngModelOptions]="{ standalone: true }" [(ngModel)]="checkIn" type="date" required />
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Check Out</span>
-                      <input
-                        class="form-control"
-                        [ngModelOptions]="{ standalone: true }"
-                        [(ngModel)]="checkOut"
-                        type="date"
-                        required
-                      />
+                      <input class="form-control" [ngModelOptions]="{ standalone: true }" [(ngModel)]="checkOut" type="date" required />
                     </div>
                   </div>
                 </div>
@@ -84,11 +63,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Adults (18+)</span>
-                      <select
-                        class="form-control"
-                        [(ngModel)]="numSeats"
-                        [ngModelOptions]="{ standalone: true }"
-                      >
+                      <select class="form-control" [(ngModel)]="numSeats" [ngModelOptions]="{ standalone: true }">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -101,16 +76,7 @@
                 </div>
 
                 <div class="form-btn">
-                  <input
-                    type="button"
-                    value="Show flights"
-                    class="submit-btn"
-                    routerLink="/prenotation/{{ departure }}/{{
-                      destination
-                    }}/{{ checkIn }}/{{ checkOut }}/{{ numSeats }}"
-                    routerLinkActive="active"
-                    (click)="showBookings = false"
-                  />
+                  <input type="button" value="Show flights" class="submit-btn" (click)="navigateTo('/prenotation')" />
                 </div>
               </form>
             </div>
@@ -119,4 +85,8 @@
       </div>
     </div>
   </section>
+
 </section>
+
+<app-destinations></app-destinations>
+<app-top-places></app-top-places>

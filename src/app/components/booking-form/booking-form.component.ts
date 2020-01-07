@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
 import { Airport } from 'src/interfaces';
 import { AirportsService } from 'src/app/services/airports.service';
 
@@ -19,10 +20,13 @@ export class BookingFormComponent implements OnInit {
   checkOut: Date = null;
   numSeats: Number;
 
-
-  constructor(public aiportService: AirportsService) { }
+  constructor(public aiportService: AirportsService, public router: Router){}
 
   async ngOnInit() {
     this.airports = await this.aiportService.getAirports();
+  }
+
+  navigateTo(url:string){
+    this.router.navigate([`${url}`]);
   }
 }

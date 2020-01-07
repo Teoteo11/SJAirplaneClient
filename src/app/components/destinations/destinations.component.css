@@ -1,0 +1,20 @@
+.separator {
+  background-image: url(../../image/snow.png);
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 600px;
+}
+
+.separator2 {
+  background-image: url(../../image/island2.jpg);
+  background-size: cover;
+  background-position-x: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 600px;
+}

@@ -1,23 +1,13 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements OnInit {
-  constructor() {}
+export class AppComponent{
 
   title = "sjairplane";
+  public index:boolean = false;
 
-  @Input() public adminModeIsOn:boolean;
-  public showBookings: Boolean = true;
-
-  public setAdminMode(value){
-    this.adminModeIsOn = value;
-  }
-  
-  async ngOnInit() {
-    this.adminModeIsOn = false;
-  }
 }

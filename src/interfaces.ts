@@ -18,9 +18,10 @@ export interface User {
 }
 export interface Flight {
   _id?: string;
-  departure: string;
-  destination: string;
+  departure: String;
+  destination: String;
   duration: number;
+  price: number;
   idAirplane: number;
 }
 export interface Route {
@@ -40,5 +41,5 @@ export interface Airport {
   id?: String;
   city: String;
   country: String;
-  name: String
+  name: String;
 }

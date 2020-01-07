@@ -1,19 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Flight } from 'src/interfaces';
-import { FlightsService } from '../../services/flights.service';
-import { AirportsService } from 'src/app/services/airports.service';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { Flight } from "src/interfaces";
+import { FlightsService } from "../../services/flights.service";
+import { AirportsService } from "src/app/services/airports.service";
 
 @Component({
-  selector: 'app-prenotation',
-  templateUrl: './prenotation.component.html',
-  styleUrls: ['./prenotation.component.css']
+  selector: "app-prenotation",
+  templateUrl: "./prenotation.component.html",
+  styleUrls: ["./prenotation.component.css"]
 })
 export class PrenotationComponent implements OnInit {
+  public flights: Array<Flight>;
 
-  public flights: Array<Flight>
-
-  constructor(private activeRoute: ActivatedRoute, public flightsService: FlightsService, public airportService: AirportsService) { }
+  constructor(
+    private activeRoute: ActivatedRoute,
+    public flightsService: FlightsService,
+    public airportService: AirportsService
+  ) {}
 
   async ngOnInit() {
     const departure = this.activeRoute.snapshot.params.departure;
@@ -22,17 +25,27 @@ export class PrenotationComponent implements OnInit {
     const checkOut = this.activeRoute.snapshot.params.checkOut;
     const numSeats = this.activeRoute.snapshot.params.numSeats;
     if (destination && checkOut) {
-      this.flights = await this.flightsService.getFlightsByDestination(departure, checkIn, Number(numSeats), destination, checkOut) as any;
-    }
-    else {
-      this.flights = await this.flightsService.getFlightsByDestination(departure, checkIn, Number(numSeats)) as any;
+      this.flights = (await this.flightsService.getFlightsByDestination(
+        departure,
+        checkIn,
+        Number(numSeats),
+        destination,
+        checkOut
+      )) as any;
+    } else {
+      this.flights = (await this.flightsService.getFlightsByDestination(
+        departure,
+        checkIn,
+        Number(numSeats)
+      )) as any;
     }
     for (let flight of this.flights) {
-      flight.departure = String((await this.airportService.getAirportById(flight.departure)).name);
-      flight.destination = String((await this.airportService.getAirportById(flight.destination)).name);
+      flight.departure = (
+        await this.airportService.getAirportById(flight.departure)
+      ).name;
+      flight.destination = (
+        await this.airportService.getAirportById(flight.destination)
+      ).name;
     }
-
-
   }
-
 }

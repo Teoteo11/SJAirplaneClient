@@ -1,0 +1,16 @@
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(
+    to top,
+    #1698fa,
+    #85aefb,
+    #bac6fc,
+    #e1e1fd,
+    #ffffff
+  );
+}

@@ -6,38 +6,48 @@
         <div class="row header">
           <div class="cell">
             Departure
-            <img src="https://img.icons8.com/officel/30/000000/airplane-take-off.png" />
+            <img
+              src="https://img.icons8.com/officel/30/000000/airplane-take-off.png"
+            />
           </div>
           <div class="cell">
             Destination
-            <img src="https://img.icons8.com/officel/30/000000/airplane-landing.png" />
+            <img
+              src="https://img.icons8.com/officel/30/000000/airplane-landing.png"
+            />
           </div>
           <div class="cell">
             Time
-            <img src="https://img.icons8.com/officel/30/000000/empty-hourglass.png" />
+            <img
+              src="https://img.icons8.com/officel/30/000000/empty-hourglass.png"
+            />
           </div>
           <div class="cell">
             Price
-            <img src="https://img.icons8.com/office/30/000000/price-tag-euro.png" />
+            <img
+              src="https://img.icons8.com/office/30/000000/price-tag-euro.png"
+            />
           </div>
         </div>
 
-        <div class="row" *ngFor="let flight of flights">
+        <div
+          class="row"
+          *ngFor="let flight of flights"
+          routerLink="/detailFlight/{{ flight._id }}"
+        >
           <div class="cell" data-title="Departure">
-            {{flight.departure}}
+            {{ flight.departure }}
           </div>
           <div class="cell" data-title="Destination">
-            {{flight.destination}}
+            {{ flight.destination }}
           </div>
           <div class="cell" data-title="Time">
-            {{flight.duration}}
+            {{ flight.duration }}
           </div>
           <div class="cell" data-title="Price">
-            {{flight.price}}
+            {{ flight.price }}
           </div>
         </div>
-
-
       </div>
     </div>
   </div>

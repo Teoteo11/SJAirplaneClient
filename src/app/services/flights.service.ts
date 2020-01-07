@@ -6,7 +6,7 @@ import { Flight } from "../../interfaces";
   providedIn: "root"
 })
 export class FlightsService {
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   async getFlights(): Promise<Flight[]> {
     return this.httpClient
@@ -20,12 +20,24 @@ export class FlightsService {
       .toPromise();
   }
 
-  async getFlightsByDestination(departure: String, checkIn: Date, numSeats: Number, destination?: String, checkOut?: Date): Promise<Flight> {
+  async getFlightsByDestination(
+    departure: String,
+    checkIn: Date,
+    numSeats: Number,
+    destination?: String,
+    checkOut?: Date
+  ): Promise<Flight> {
     if (destination && checkOut) {
-      return this.httpClient.get<Flight>(`http://localhost:3002/flights/${departure}/${numSeats}/?destination=${destination}&?checkIn=${checkIn}&?checkOut=${checkOut}`)
+      return this.httpClient
+        .get<Flight>(
+          `http://localhost:3002/flights/${departure}/${numSeats}/?destination=${destination}&checkIn=${checkIn}&checkOut=${checkOut}`
+        )
         .toPromise();
     }
-    return this.httpClient.get<Flight>(`http://localhost:3002/flights/${departure}/${numSeats}/?checkIn=${checkIn}`)
+    return this.httpClient
+      .get<Flight>(
+        `http://localhost:3002/flights/${departure}/${numSeats}/?checkIn=${checkIn}`
+      )
       .toPromise();
   }
 }

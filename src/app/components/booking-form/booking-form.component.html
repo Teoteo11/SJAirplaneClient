@@ -17,9 +17,16 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Flying from</span>
-                      <select class="form-control" [(ngModel)]="departure" [ngModelOptions]="{standalone: true}">
-                        <option [ngValue]="exaple">exaple</option>
-                        <option *ngFor="let airport of airports" [ngValue]="airport.name">{{airport.name}}</option>
+                      <select
+                        class="form-control"
+                        [(ngModel)]="departure"
+                        [ngModelOptions]="{ standalone: true }"
+                      >
+                        <option
+                          *ngFor="let airport of airports"
+                          [ngValue]="airport.name"
+                          >{{ airport.name }}</option
+                        >
                       </select>
                       <span class="select-arrow"></span>
                     </div>
@@ -27,10 +34,16 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Flyning to</span>
-                      <select class="form-control" [(ngModel)]="destination" [ngModelOptions]="{standalone: true}">
-                        <option [ngValue]="exaple">exaple</option>
-                        <option *ngFor="let airport of airports" [ngValue]="airport.name">{{airport.name}}</option>
-
+                      <select
+                        class="form-control"
+                        [(ngModel)]="destination"
+                        [ngModelOptions]="{ standalone: true }"
+                      >
+                        <option
+                          *ngFor="let airport of airports"
+                          [ngValue]="airport.name"
+                          >{{ airport.name }}</option
+                        >
                       </select>
                       <span class="select-arrow"></span>
                     </div>
@@ -41,16 +54,26 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Check In</span>
-                      <input class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="checkIn"
-                        type="date" required />
+                      <input
+                        class="form-control"
+                        [ngModelOptions]="{ standalone: true }"
+                        [(ngModel)]="checkIn"
+                        type="date"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Check Out</span>
-                      <input class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="checkOut"
-                        type="date" required />
+                      <input
+                        class="form-control"
+                        [ngModelOptions]="{ standalone: true }"
+                        [(ngModel)]="checkOut"
+                        type="date"
+                        required
+                      />
                     </div>
                   </div>
                 </div>
@@ -59,7 +82,11 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Adults (18+)</span>
-                      <select class="form-control" [(ngModel)]="numSeats" [ngModelOptions]="{standalone: true}">
+                      <select
+                        class="form-control"
+                        [(ngModel)]="numSeats"
+                        [ngModelOptions]="{ standalone: true }"
+                      >
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -72,8 +99,14 @@
                 </div>
 
                 <div class="form-btn">
-                  <input type="button" value="Show flights" class="submit-btn" routerLink="/prenotation"
-                    routerLinkActive="active" (click)="showBookings = false" />
+                  <input
+                    type="button"
+                    value="Show flights"
+                    class="submit-btn"
+                    routerLink="/prenotation"
+                    routerLinkActive="active"
+                    (click)="showBookings = false"
+                  />
                 </div>
               </form>
             </div>

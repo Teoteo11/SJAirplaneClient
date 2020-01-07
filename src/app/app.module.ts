@@ -17,6 +17,7 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
 import { BookingViewComponent } from './components/admin/dashboard/booking-view/booking-view.component';
 import { FlightViewComponent } from './components/admin/dashboard/flight-view/flight-view.component';
 import { DashNavComponent } from './components/admin/dashboard/dash-nav/dash-nav.component';
+import { DetailFlightComponent } from './detail-flight/detail-flight.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DashNavComponent } from './components/admin/dashboard/dash-nav/dash-nav
     DashboardComponent,
     BookingViewComponent,
     FlightViewComponent,
-    DashNavComponent
+    DashNavComponent,
+    DetailFlightComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

@@ -439,4 +439,6 @@ footer .input-group-addon {
 
 .details-card {
   background-image: url(./image/air.jpg);
+  background-size: cover;
+  padding-bottom: 40px;
 }

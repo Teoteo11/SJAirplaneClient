@@ -4,9 +4,10 @@ import { Routes, RouterModule } from "@angular/router";
 import { UsersComponent } from "./components/users/users.component";
 import { UsersDetailComponent } from "./components/users-detail/users-detail.component";
 import { PrenotationComponent } from "./components/prenotation/prenotation.component";
-import { DashboardComponent } from "./components/admin/dashboard/dashboard.component";
 import { DetailFlightComponent } from "./detail-flight/detail-flight.component";
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
+import { LoginComponent } from './components/admin/login/login.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: BookingFormComponent },

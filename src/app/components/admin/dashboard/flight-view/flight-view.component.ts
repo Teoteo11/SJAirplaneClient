@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Flight } from 'src/interfaces';
+import { FlightsService } from 'src/app/services/flights.service';
 
 @Component({
   selector: 'app-flight-view',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlightViewComponent implements OnInit {
 
-  constructor() { }
+  public flights:Flight[];
 
-  ngOnInit() {
+  constructor(public flightService:FlightsService) { }
+  
+  async ngOnInit() {
+    this.flights = await this.flightService.getFlights();
   }
 
 }

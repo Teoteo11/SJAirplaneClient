@@ -5,20 +5,20 @@
 
         <div class="form-group">
           <span class="form-label">Username or email</span>
-          <input type="text" class="form-control" placeholder="johndoe@mymail.com -or- pineapple_joe" value="" />
+          <input type="text" class="form-control" placeholder="johndoe@mymail.com -or- pineapple_joe" [ngModelOptions]="{standalone: true}" [(ngModel)]="loginUserData.email" name="email" />
         </div>
 
         <div class="form-group">
           <span class="form-label">Password</span>
-          <input type="password" class="form-control" placeholder="We will keep it very secret. Yeah." value="" />
+          <input type="password" class="form-control" placeholder="We will keep it very secret. Yeah." [ngModelOptions]="{standalone: true}" [(ngModel)]="loginUserData.password" name="password" />
         </div>
 
-        <div class="form-btn">
-          <input type="button" value="Login" class="submit-btn" />
+        <div class="form-btn ">
+          <input type="button" value="Login" class="submit-btn" (click)="checkUser(username, password)" />
         </div>
 
         <div class="form-group mt-2 text-right">
-          <a href="#" class="forget-label">Forget Password?</a>
+          <a href="" class="forget-label ">Forget Password?</a>
         </div>
 
       </form>

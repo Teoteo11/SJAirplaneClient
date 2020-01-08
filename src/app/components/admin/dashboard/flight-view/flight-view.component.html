@@ -2,6 +2,8 @@
   <div class="card-body">
     <h5 class="card-title">Flight Overview</h5>
     <h6 class="card-subtitle mb-2 text-muted">View or edit flights</h6>
-    <h6 class="text-preformatted" *ngFor="let f of flights">{{ f._id }}</h6>
+    <ng-container *ngFor="let f of flights">
+      <a class="nav-link">{{ f.departure }} - {{ f.destination }}</a>
+    </ng-container>
   </div>
 </div>

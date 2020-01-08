@@ -14,10 +14,10 @@ export class BookingFormComponent implements OnInit {
 
   showBookings: boolean = true;
   airports: Array<Airport> = [];
-  departure: String = null;
-  destination: String = null;
-  checkIn: Date = null;
-  checkOut: Date = null;
+  departure: String;
+  destination: String;
+  checkIn: Date ;
+  checkOut: Date;
   numSeats: Number;
 
   constructor(public aiportService: AirportsService, public router: Router){}
@@ -27,6 +27,11 @@ export class BookingFormComponent implements OnInit {
   }
 
   navigateTo(url:string){
-    this.router.navigate([`${url}`]);
+    if(this.destination && this.checkOut){
+      this.router.navigate([`${url}/${this.departure}/${this.checkIn}/${this.numSeats}/${this.destination}/${this.checkOut}`]);
+    }
+    else{
+      this.router.navigate([`${url}/${this.departure}/${this.checkIn}/${this.numSeats}`]);
+    }
   }
 }
